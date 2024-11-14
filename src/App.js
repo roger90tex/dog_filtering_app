@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DogApp from "./DogApp";
+import DogDetail from "./DogDetail";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          {/* Ruta principal para la app de filtrado de perros */}
+          <Route path="/" element={<DogApp />} />
+          {/* Ruta para mostrar detalles de cada perro */}
+          <Route path="/dog/:id" element={<DogDetail />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
