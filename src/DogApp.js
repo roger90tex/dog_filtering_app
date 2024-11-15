@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import useFetchDogs from "./useFetchDogs";
+import "./DogApp.css"; 
 
 function DogApp() {
   const {   dogs, loading, error } = useFetchDogs();
