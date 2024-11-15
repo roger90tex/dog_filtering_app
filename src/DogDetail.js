@@ -7,7 +7,6 @@ function DogDetail() {
   const dog = location.state?.dog;
 
   if (!dog) {
-    // Si el objeto `dog` no está en el estado, redirige al usuario a la página principal
     return <Navigate to="/" />;
   }
 

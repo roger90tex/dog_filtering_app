@@ -11,6 +11,7 @@ function useFetchDogs(){
         async function fetchDogs() {
             try{
                 const response = await axios.get ('https://api.thedogapi.com/v1/breeds');
+                console.log(response.data);
                 setDogs(response.data);
             } catch (error){
                 console.error('Error al obtener los datos:', error);
